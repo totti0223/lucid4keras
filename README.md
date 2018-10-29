@@ -64,6 +64,8 @@ git clone this repository and do
 pip install .
 ```
 
+installation by pypi is in progress
+
 ### Examples
 
 See the jupyter notebook for concrete examples. 
