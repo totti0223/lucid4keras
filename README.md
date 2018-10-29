@@ -1,6 +1,6 @@
 
 
-![tiled](/Users/todayousuke/Resilio Sync/sandbox/9_code/lucid4keras/resources/tiled.jpg)
+![tiled](./resources/tiled.jpg)
 
 # Lucid for Keras (lucid4keras)
 
