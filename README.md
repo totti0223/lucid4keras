@@ -42,7 +42,7 @@ this library is only a wrapper to run lucid with keras models. borrows a lot of 
 
 Images from Mixed4:Neuron 300 (left),  Mixed5:Neuron 408 (right), Mixed0:Neuron 230 in InceptionV3 of keras stored imagenet trained weights and structure. Generated images resembles that of pure lucid.
 
-![mixed0_230]([lucid4keras](https://github.com/totti0223/lucid4keras)/[resources](https://github.com/totti0223/lucid4keras/tree/master/resources)/**mixed0_230.jpg**)
+![mixed0_230]([lucid4keras](https://github.com/totti0223/lucid4keras/resources/mixed0_230.jpg)
 
 
 
