@@ -1,5 +1,3 @@
-
-
 ![tiled](./resources/tiled.jpg)
 
 # Lucid for Keras (lucid4keras)
