@@ -15,7 +15,7 @@ from . optimizers import *
 
 def keras_render_vis(input_model, objective_f, param_f=None, optimizer=None,
                transforms=None, thresholds=[512], print_objectives=None,
-               verbose=True, use_fixed_seed=False):
+               verbose=True, use_fixed_seed=False,raw = False):
     if use_fixed_seed:
         tf.set_random_seed(0)
         
@@ -42,7 +42,11 @@ def keras_render_vis(input_model, objective_f, param_f=None, optimizer=None,
             t_image += step
             if i in thresholds:
                 vis = t_image
-                images.append(normalize_array(np.hstack(vis)))
+                if raw == False:
+                    vis=normalize_array(vis)
+                else:
+                    pass
+                images.append(vis)
                 if verbose:
                     print(i, loss)
                     show(np.hstack(vis))
@@ -58,7 +62,6 @@ def keras_render_vis(input_model, objective_f, param_f=None, optimizer=None,
         show(np.hstack(vis))
         
         del loss, train #clear graphs
-
         return normalize_array(np.hstack(vis))
 
 def keras_make_vis_T(input_model, objective_f, param_f=None, optimizer=None,
