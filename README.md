@@ -2,6 +2,10 @@
 
 # Lucid for Keras (lucid4keras)
 
+Note: Generating more than one image (batch mode) is under debugging.
+
+
+
 Want to generate beautiful images by [Feature Visualization](https://distill.pub/2017/feature-visualization/) that [lucid](https://github.com/tensorflow/lucid) does with Keras models?
 
 The codes provided by lucid imports tensorflow graph. This wrapper adds a additional function to make keras model feed to lucid. Kept the structure of lucid as it is as possible so majority of the its function (e.g. transform_f, param_f, objective_f) can be used.
