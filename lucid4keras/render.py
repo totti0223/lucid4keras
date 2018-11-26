@@ -42,11 +42,7 @@ def keras_render_vis(input_model, objective_f, param_f=None, optimizer=None,
             t_image += step
             if i in thresholds:
                 vis = t_image
-                images.append(normalize_array(np.hstack(vis)))
-                if raw == False:
-                    vis=normalize_array(vis)
-                else:
-                    pass
+                images.append(vis)
                 if verbose:
                     print(i, loss)
                     show(np.hstack(vis))
