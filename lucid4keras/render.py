@@ -42,16 +42,19 @@ def keras_render_vis(input_model, objective_f, param_f=None, optimizer=None,
             t_image += step
             if i in thresholds:
                 vis = t_image
+                images.append(normalize_array(np.hstack(vis)))
                 if raw == False:
                     vis=normalize_array(vis)
                 else:
                     pass
-                images.append(vis)
                 if verbose:
                     print(i, loss)
                     show(np.hstack(vis))
-
-        del loss, train #clear graphs
+        try:
+            del loss, train #clear graphs
+            del _model
+        except:
+            pass
         
         return np.array(images)
     
@@ -74,9 +77,9 @@ def keras_make_vis_T(input_model, objective_f, param_f=None, optimizer=None,
         transformed = Lambda(lambda inputs: transform_f(inputs),name="transform_layer")(input_tensor)
         top = Model(inputs=input_tensor,outputs=transformed)
 
-        model = Model(inputs = top.input,
+        _model = Model(inputs = top.input,
                   outputs = bottom(top.output))
-        return model
+        return _model
     
 
     _t_image = make_t_image(param_f)
