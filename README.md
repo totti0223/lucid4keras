@@ -2,9 +2,6 @@
 
 # Lucid for Keras (lucid4keras)
 
-Note: Generating more than one image (batch mode) is under debugging.
-
-
 
 Want to generate beautiful images by [Feature Visualization](https://distill.pub/2017/feature-visualization/) that [lucid](https://github.com/tensorflow/lucid) does with Keras models?
 
